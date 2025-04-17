@@ -132,8 +132,17 @@ struct ContentView: View {
                 
                 await MainActor.run {
                     let multiarray = output.var_358
-                    catProbability = multiarray[0].floatValue
-                    dogProbability = multiarray[1].floatValue
+                    // Apply softmax to convert logits to probabilities
+                    let catLogit = multiarray[0].floatValue
+                    let dogLogit = multiarray[1].floatValue
+                    
+                    // Calculate softmax: exp(logit) / sum(exp(logits))
+                    let catExp = exp(catLogit)
+                    let dogExp = exp(dogLogit)
+                    let sum = catExp + dogExp
+                    
+                    catProbability = catExp / sum
+                    dogProbability = dogExp / sum
                     isClassifying = false
                 }
             } catch {
