@@ -62,3 +62,4 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 CatDog/.DS_Store
 CLAUDE.md
+*.DS_Store
