@@ -3,7 +3,7 @@
 An iOS demo app that uses machine learning to classify images as either cats or dogs.
 
 <p align="center">
-  <img width="300" src="Media/CatDogMock.png">
+  <img width="500" src="Media/CatDogMock.png">
 </p>
 
 ## Features
