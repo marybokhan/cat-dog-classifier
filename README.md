@@ -2,6 +2,10 @@
 
 An iOS demo app that uses machine learning to classify images as either cats or dogs.
 
+<p align="center">
+  <img width="300" src="Media/CatDogMock.png">
+</p>
+
 ## Features
 
 - Real-time image classification using CoreML
